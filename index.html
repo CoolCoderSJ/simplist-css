@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>simplist.css</title>
+        <link rel="stylesheet" type="text/css" href="simplist.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-light.min.css">
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    </head>
+    <body style="padding: 40px;">
+        <h1>simple.css</h1>
+        <p>A collection of minimal and easy to use components.</p>
+        <br><br>
+        <h1>Typography</h1>
+        <hr>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <small>Small text</small>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+&lt;p&gt;Paragraph text&lt;/p&gt;
+&lt;small&gt;Small text&lt;/small&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Buttons</h1>
+        <hr>
+        <button>Button</button>
+        <button class="secondary">Secondary</button>
+        <button class="success">Success</button>
+        <button class="danger">Danger</button>
+        <button class="warning">Warning</button>
+        <button class="info">Info</button>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;button&gt;Button&lt;/button&gt;
+&lt;button class="secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="success"&gt;Success&lt;/button&gt;
+&lt;button class="danger"&gt;Danger&lt;/button&gt;
+&lt;button class="warning"&gt;Warning&lt;/button&gt;
+&lt;button class="info"&gt;Info&lt;/button&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Forms</h1>
+        <hr>
+        <form style="width: 50%">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Name">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="*********">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Enter some text..."></textarea>
+
+            <label for="number">Number</label>
+            <div class="number-input">
+                <input type="number" id="number" name="number">
+                <button type="button" class="secondary" onclick="document.getElementById('number').stepDown()">-</button>
+                <button type="button" class="secondary" onclick="document.getElementById('number').stepUp()">+</button>
+            </div>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date">
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time">
+            <label for="datetime">Datetime</label>
+            <input type="datetime-local" id="datetime" name="datetime">
+            <label for="color">Color</label>
+            <input type="color" id="color" name="color">
+            <label for="range">Range</label>
+            <input type="range" id="range" name="range">
+            <label for="file">File</label>
+            <input type="file" id="file" name="file">
+            <label for="checkbox">Checkbox</label>
+            <input type="checkbox" id="checkbox" name="checkbox">
+            <input type="checkbox" id="checkbox" name="checkbox">
+            <label for="radio">Radio</label>
+            <input type="radio" id="radio" name="radio">
+            <label for="select">Select</label>
+            <select id="select" name="select">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+            <label for="multiple">Multiple</label>
+            <select id="multiple" name="multiple" multiple>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+            <label for="datalist">Datalist</label>
+            <input list="datalist" id="datalist" name="datalist">
+            <datalist id="datalist">
+                <option value="Option 1">
+                <option value="Option 2">
+                <option value="Option 3">
+            </datalist>
+            <button>Submit</button>
+        </form>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;form&gt;
+    &lt;label for="name"&gt;Name&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;label for="email"&gt;Email&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;
+    &lt;label for="password"&gt;Password&lt;/label&gt;
+    &lt;input type="password" id="password" name="password"&gt;
+    &lt;label for="message"&gt;Message&lt;/label&gt;
+    &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
+    &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Tables</h1>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>john.doe@gmail.com</td>
+                    <td>123-456-7890</td>
+                </tr>
+                <tr>
+                    <td>Jane Doe</td>
+                    <td>jane.doe@gmail.com</td>
+                    <td>123-456-7890</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Email&lt;/th&gt;
+            &lt;th&gt;Phone&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;John Doe&lt;/td&gt;
+            &lt;td&gt;john.doe@gmail.com&lt;/td&gt;
+            &lt;td&gt;123-456-7890&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Jane Doe&lt;/td&gt;
+            &lt;td&gt;jane.doe@gmail.com&lt;/td&gt;
+            &lt;td&gt;123-456-7890&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Lists</h1>
+        <hr>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Images</h1>
+        <hr>
+        <img src="https://via.placeholder.com/150" alt="Placeholder image">
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;img src="https://via.placeholder.com/150" alt="Placeholder image"&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Alerts</h1>
+        <hr>
+        <div class="alert">This is a primary alert</div>
+        <div class="alert secondary">This is a secondary alert</div>
+        <div class="alert success">This is a success alert</div>
+        <div class="alert danger">This is a danger alert</div>
+        <div class="alert warning">This is a warning alert</div>
+        <div class="alert info">This is an info alert</div>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;div class="alert"&gt;This is a primary alert&lt;/div&gt;
+&lt;div class="alert secondary"&gt;This is a secondary alert&lt;/div&gt;
+&lt;div class="alert success"&gt;This is a success alert&lt;/div&gt;
+&lt;div class="alert danger"&gt;This is a danger alert&lt;/div&gt;
+&lt;div class="alert warning"&gt;This is a warning alert&lt;/div&gt;
+&lt;div class="alert info"&gt;This is an info alert&lt;/div&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Modals</h1>
+        <hr>
+        <button onclick="document.getElementById('modal').style.display = 'block'">Open Modal</button>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="document.getElementById('modal').style.display = 'none'">&times;</span>
+                <h2>Modal Title</h2>
+                <p>Modal content goes here.</p>
+                <button onclick="document.getElementById('modal').style.display = 'none'">Close</button>
+            </div>
+        </div>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;button onclick="document.getElementById('modal').style.display = 'block'"&gt;Open Modal&lt;/button&gt;
+&lt;div id="modal" class="modal"&gt;
+    &lt;div class="modal-content"&gt;
+        &lt;span class="close" onclick="document.getElementById('modal').style.display = 'none'"&gt;&times;&lt;/span&gt;
+        &lt;h2&gt;Modal Title&lt;/h2&gt;
+        &lt;p&gt;Modal content goes here.&lt;/p&gt;
+        &lt;button onclick="document.getElementById('modal').style.display = 'none'"&gt;Close&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Progress Bars</h1>
+        <hr>
+        <div class="progress">
+            <div class="progress-bar" style="width: 25%"></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" style="width: 50%"></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" style="width: 75%"></div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" style="width: 100%"></div>
+        </div>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;div class="progress"&gt;
+    &lt;div class="progress-bar" style="width: 25%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress"&gt;
+    &lt;div class="progress-bar" style="width: 50%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress"&gt;
+    &lt;div class="progress-bar" style="width: 75%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="progress"&gt;
+    &lt;div class="progress-bar" style="width: 100%"&gt;&lt;/div&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Badges</h1>
+        <hr>
+        <span class="badge">1</span>
+        <span class="badge secondary">2</span>
+        <span class="badge success">3</span>
+        <span class="badge danger">4</span>
+        <span class="badge warning">5</span>
+        <span class="badge info">6</span>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;span class="badge"&gt;1&lt;/span&gt;
+&lt;span class="badge secondary"&gt;2&lt;/span&gt;
+&lt;span class="badge success"&gt;3&lt;/span&gt;
+&lt;span class="badge danger"&gt;4&lt;/span&gt;
+&lt;span class="badge warning"&gt;5&lt;/span&gt;
+&lt;span class="badge info"&gt;6&lt;/span&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Dropdowns</h1>
+        <hr>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;div class="dropdown"&gt;
+    &lt;button class="dropbtn"&gt;Dropdown&lt;/button&gt;
+    &lt;div class="dropdown-content"&gt;
+        &lt;a href="#"&gt;Link 1&lt;/a&gt;
+        &lt;a href="#"&gt;Link 2&lt;/a&gt;
+        &lt;a href="#"&gt;Link 3&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Navbars</h1>
+        <hr>
+        <div class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;div class="navbar"&gt;
+    &lt;a href="#"&gt;Home&lt;/a&gt;
+    &lt;a href="#"&gt;About&lt;/a&gt;
+    &lt;a href="#"&gt;Contact&lt;/a&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+
+
+        <br><br>
+        <h1>Card</h1>
+        <hr>
+        <div class="card">
+            <img src="https://via.placeholder.com/150" alt="Placeholder image">
+            <h2>Card Title</h2>
+            <p>Card content goes here.</p>
+            <button>Read More</button>
+        </div>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;div class="card"&gt;
+    &lt;img src="https://via.placeholder.com/150" alt="Placeholder image"&gt;
+    &lt;h2&gt;Card Title&lt;/h2&gt;
+    &lt;p&gt;Card content goes here.&lt;/p&gt;
+    &lt;button&gt;Read More&lt;/button&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Carousel</h1>
+        <hr>
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="https://via.placeholder.com/150" alt="Placeholder image">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://via.placeholder.com/150" alt="Placeholder image">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://via.placeholder.com/150" alt="Placeholder image">
+            </div>
+            <div class="carousel-slide">
+                <img src="https://via.placeholder.com/150" alt="Placeholder image">
+            </div>
+            <button class="carousel-prev">Prev</button>
+            <button class="carousel-next">Next</button>
+        </div>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;div class="carousel"&gt;
+    &lt;div class="carousel-slide"&gt;
+        &lt;img src="https://via.placeholder.com/150" alt="Placeholder image"&gt;
+    &lt;/div&gt;
+    &lt;div class="carousel-slide"&gt;
+        &lt;img src="https://via.placeholder.com/150" alt="Placeholder image"&gt;
+    &lt;/div&gt;
+    &lt;div class="carousel-slide"&gt;
+        &lt;img src="https://via.placeholder.com/150" alt="Placeholder image"&gt;
+    &lt;/div&gt;
+    &lt;div class="carousel-slide"&gt;
+        &lt;img src="https://via.placeholder.com/150" alt="Placeholder image"&gt;
+    &lt;/div&gt;
+    &lt;button class="carousel-prev"&gt;Prev&lt;/button&gt;
+    &lt;button class="carousel-next"&gt;Next&lt;/button&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Accordion</h1>
+        <hr>
+        <div class="accordion">
+            <button class="accordion-btn">Section 1</button>
+            <div class="accordion-content">
+                <p>Section 1 content goes here.</p>
+            </div>
+            <button class="accordion-btn">Section 2</button>
+            <div class="accordion-content">
+                <p>Section 2 content goes here.</p>
+            </div>
+            <button class="accordion-btn">Section 3</button>
+            <div class="accordion-content">
+                <p>Section 3 content goes here.</p>
+            </div>
+        </div>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;div class="accordion"&gt;
+    &lt;button class="accordion-btn"&gt;Section 1&lt;/button&gt;
+    &lt;div class="accordion-content"&gt;
+        &lt;p&gt;Section 1 content goes here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;button class="accordion-btn"&gt;Section 2&lt;/button&gt;
+    &lt;div class="accordion-content"&gt;
+        &lt;p&gt;Section 2 content goes here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;button class="accordion-btn"&gt;Section 3&lt;/button&gt;
+    &lt;div class="accordion-content"&gt;
+        &lt;p&gt;Section 3 content goes here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Tooltip</h1>
+        <hr>
+        <span class="tooltip" title="Tooltip text">Hover over me</span>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;span class="tooltip" title="Tooltip text"&gt;Hover over me&lt;/span&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Popover</h1>
+        <hr>
+        <span class="popover" title="Popover title" content="Popover content">Click me</span>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;span class="popover" title="Popover title" content="Popover content"&gt;Click me&lt;/span&gt;
+            </code>
+        </pre>
+
+        <br><br>
+        <h1>Dropdown</h1>
+        <hr>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <br>
+        <pre>
+            <code class="language-html">
+&lt;div class="dropdown"&gt;
+    &lt;button class="dropbtn"&gt;Dropdown&lt;/button&gt;
+    &lt;div class="dropdown-content"&gt;
+        &lt;a href="#"&gt;Link 1&lt;/a&gt;
+        &lt;a href="#"&gt;Link 2&lt;/a&gt;
+        &lt;a href="#"&gt;Link 3&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+        </pre>
+
+        <br><br>
+
+    </body>
+    <script>hljs.configure({ 'languages': ['html'] }); hljs.highlightAll();</script>
+</html>

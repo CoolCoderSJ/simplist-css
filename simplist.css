@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+p, h1, h2, h3, h4, h5, h6, li, a, label, button, input, textarea, small {
+    font-family: 'Merriweather', serif;
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
+
+:root {
+    --primary-bg: black;
+    --secondary-bg: white;
+    --primary-text: white;
+    --secondary-text: black;
+    --success-bg: lightgreen;
+    --success-text: black;
+    --danger-bg: darkred;
+    --danger-text: white;
+    --warning-bg: yellow;
+    --warning-text: black;
+    --info-bg: lightblue;
+    --info-text: black;
+    --light-text: gray;
+}
+
+* {
+    transition: 250ms;
+}
+
+button:hover, a:hover {
+    transition: 250ms;
+}
+
+body {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary-text);
+}
+
+nav a:hover {
+    color: var(--light-text);
+}
+
+nav div {
+    display: flex;
+    gap: 24px;
+}
+
+a {
+    text-decoration: underline;
+    color: var(--secondary-text);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+button a {
+    color: var(--primary-text) !important;
+}
+
+button.secondary a {
+    color: var(--secondary-text) !important;
+}
+
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    cursor: pointer;
+    border: 3px solid var(--primary-bg);
+}
+
+.secondary {
+    color: var(--secondary-text);
+    background-color: var(--secondary-bg);
+}
+
+.success {
+    color: var(--success-text);
+    background-color: var(--success-bg);
+}
+
+.danger {
+    color: var(--danger-text);
+    background-color: var(--danger-bg);
+}
+
+.warning {
+    color: var(--warning-text);
+    background-color: var(--warning-bg);
+}
+
+.info {
+    color: var(--info-text);
+    background-color: var(--info-bg);
+}
+
+button.secondary {
+    border: 3px solid var(--primary-bg);
+}
+
+button.success {
+    border: 3px solid var(--success-bg);
+}
+
+button.danger {
+    border: 3px solid var(--danger-bg);
+}
+
+button.warning {
+    border: 3px solid var(--warning-bg);
+}
+
+button.info {
+    border: 3px solid var(--info-bg);
+}
+
+button:hover {
+    background-color: var(--primary-text);
+    color: var(--primary-bg);
+}
+
+button.secondary:hover {
+    background-color: var(--secondary-text);
+    color: var(--secondary-bg);
+}
+
+button.success:hover {
+    background-color: var(--primary-text);
+    color: var(--success-bg);
+}
+
+button.danger:hover {
+    background-color: var(--danger-text);
+    color: var(--danger-bg);
+}
+
+button.warning:hover {
+    background-color: var(--primary-text);
+}
+
+button.info:hover {
+    background-color: var(--primary-text);
+    color: var(--info-bg);
+}
+
+button a:hover {
+    color: black !important;
+}
+
+button.secondary a:hover {
+    color: white !important;
+}
+
+
+form {
+    text-align: left;
+    padding: 16px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.number-input {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+.number-input input[type=number] {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.number-input button {
+    border: 1px solid var(--primary-bg);
+    width: fit-content;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.number-input input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+form.nostyles {
+    border: none;
+    padding: 0;
+    width: auto;
+    text-align: center;
+}
+
+form button {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.selection_field {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], input[type="date"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="number"]:focus, textarea, input[type="date"]:focus, input[type="time"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus {
+    transform: translateY(-4px);
+    transition: 250ms;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 8px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid black;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    transition: 250ms;
+}
+
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+    background-color: black;
+}
+
+.alert {
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.editor {
+    padding: 16px;
+    border: 0.5px solid black;
+    border-radius: 4px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+
+textarea {
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    border: 2px solid black;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 3px;
+    background-color: black;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: black;
+  }
+
+  input:checked + .slider:before {
+    background-color: white;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px black;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
