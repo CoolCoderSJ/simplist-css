@@ -6,6 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/atom-one-light.min.css">
         <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+        <style>
+            form label {
+                margin-top: 16px;
+            }
+            .selection_field label {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        </style>
     </head>
     <body style="padding: 40px;">
         <h1>simple.css</h1>
@@ -82,52 +91,66 @@
             <input type="time" id="time" name="time">
             <label for="datetime">Datetime</label>
             <input type="datetime-local" id="datetime" name="datetime">
+
             <label for="color">Color</label>
-            <input type="color" id="color" name="color">
+            <div class="color-container">
+                <input type="color" id="color" name="color" oninput="this.parentElement.querySelector('p').innerHTML = this.value">
+                <p>#000000</p>
+            </div>
+
             <label for="range">Range</label>
             <input type="range" id="range" name="range">
             <label for="file">File</label>
             <input type="file" id="file" name="file">
+
             <label for="checkbox">Checkbox</label>
-            <input type="checkbox" id="checkbox" name="checkbox">
-            <input type="checkbox" id="checkbox" name="checkbox">
+            <div class="selection_field">
+                <label for="checkbox">Apples</label>
+                <input type="checkbox" name="checkbox" checked>
+            </div>
+            <div class="selection_field">
+                <label for="checkbox">Bananas</label>
+                <input type="checkbox" name="checkbox">
+            </div>
+            <div class="selection_field">
+                <label for="checkbox">Oranges</label>
+                <input type="checkbox" name="checkbox">
+            </div>
+
             <label for="radio">Radio</label>
-            <input type="radio" id="radio" name="radio">
+            <div class="selection_field">
+                <label for="radio">Apples</label>
+                <input type="radio" name="radio" checked>
+            </div>
+            <div class="selection_field">
+                <label for="radio">Bananas</label>
+                <input type="radio" name="radio">
+            </div>
+            <div class="selection_field">
+                <label for="radio">Oranges</label>
+                <input type="radio" name="radio">
+            </div>
+
             <label for="select">Select</label>
             <select id="select" name="select">
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>
             </select>
+
             <label for="multiple">Multiple</label>
             <select id="multiple" name="multiple" multiple>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>
             </select>
-            <label for="datalist">Datalist</label>
-            <input list="datalist" id="datalist" name="datalist">
-            <datalist id="datalist">
-                <option value="Option 1">
-                <option value="Option 2">
-                <option value="Option 3">
-            </datalist>
+
             <button>Submit</button>
         </form>
         <br>
         <pre>
             <code class="language-html">
-&lt;form&gt;
-    &lt;label for="name"&gt;Name&lt;/label&gt;
-    &lt;input type="text" id="name" name="name"&gt;
-    &lt;label for="email"&gt;Email&lt;/label&gt;
-    &lt;input type="email" id="email" name="email"&gt;
-    &lt;label for="password"&gt;Password&lt;/label&gt;
-    &lt;input type="password" id="password" name="password"&gt;
-    &lt;label for="message"&gt;Message&lt;/label&gt;
-    &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
-    &lt;button&gt;Submit&lt;/button&gt;
-&lt;/form&gt;
+------------------------------------------------------
             </code>
         </pre>
 
@@ -244,33 +267,6 @@
         </pre>
 
         <br><br>
-        <h1>Modals</h1>
-        <hr>
-        <button onclick="document.getElementById('modal').style.display = 'block'">Open Modal</button>
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="document.getElementById('modal').style.display = 'none'">&times;</span>
-                <h2>Modal Title</h2>
-                <p>Modal content goes here.</p>
-                <button onclick="document.getElementById('modal').style.display = 'none'">Close</button>
-            </div>
-        </div>
-        <br>
-        <pre>
-            <code class="language-html">
-&lt;button onclick="document.getElementById('modal').style.display = 'block'"&gt;Open Modal&lt;/button&gt;
-&lt;div id="modal" class="modal"&gt;
-    &lt;div class="modal-content"&gt;
-        &lt;span class="close" onclick="document.getElementById('modal').style.display = 'none'"&gt;&times;&lt;/span&gt;
-        &lt;h2&gt;Modal Title&lt;/h2&gt;
-        &lt;p&gt;Modal content goes here.&lt;/p&gt;
-        &lt;button onclick="document.getElementById('modal').style.display = 'none'"&gt;Close&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-            </code>
-        </pre>
-
-        <br><br>
         <h1>Progress Bars</h1>
         <hr>
         <div class="progress">
@@ -330,9 +326,9 @@
         <div class="dropdown">
             <button class="dropbtn">Dropdown</button>
             <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <a class="dropdown-item" href="#">Link 1</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a>
             </div>
         </div>
         <br>
@@ -352,19 +348,20 @@
         <br><br>
         <h1>Navbars</h1>
         <hr>
-        <div class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </div>
+        <nav>
+            <div>
+                <a>Left Content</a>
+            </div>
+            <div>
+                <a>Home</a>
+                <a>About</a>
+                <a>Contact</a>
+            </div>
+        </nav>
         <br>
         <pre>
             <code class="language-html">
-&lt;div class="navbar"&gt;
-    &lt;a href="#"&gt;Home&lt;/a&gt;
-    &lt;a href="#"&gt;About&lt;/a&gt;
-    &lt;a href="#"&gt;Contact&lt;/a&gt;
-&lt;/div&gt;
+------------------------------------------------------
             </code>
         </pre>
 
@@ -374,63 +371,20 @@
         <hr>
         <div class="card">
             <img src="https://via.placeholder.com/150" alt="Placeholder image">
-            <h2>Card Title</h2>
-            <p>Card content goes here.</p>
-            <button>Read More</button>
+            <h2 class="card-title">Card Title</h2>
+            <p class="card-content">Card content goes here.</p>
+            <div class="card-footer">
+                <button>Read More</button>
+            </div>
         </div>
         <br>
         <pre>
             <code class="language-html">
-&lt;div class="card"&gt;
-    &lt;img src="https://via.placeholder.com/150" alt="Placeholder image"&gt;
-    &lt;h2&gt;Card Title&lt;/h2&gt;
-    &lt;p&gt;Card content goes here.&lt;/p&gt;
-    &lt;button&gt;Read More&lt;/button&gt;
-&lt;/div&gt;
+------------------------------------------------------
             </code>
         </pre>
 
-        <br><br>
-        <h1>Carousel</h1>
-        <hr>
-        <div class="carousel">
-            <div class="carousel-slide">
-                <img src="https://via.placeholder.com/150" alt="Placeholder image">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://via.placeholder.com/150" alt="Placeholder image">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://via.placeholder.com/150" alt="Placeholder image">
-            </div>
-            <div class="carousel-slide">
-                <img src="https://via.placeholder.com/150" alt="Placeholder image">
-            </div>
-            <button class="carousel-prev">Prev</button>
-            <button class="carousel-next">Next</button>
-        </div>
-        <br>
-        <pre>
-            <code class="language-html">
-&lt;div class="carousel"&gt;
-    &lt;div class="carousel-slide"&gt;
-        &lt;img src="https://via.placeholder.com/150" alt="Placeholder image"&gt;
-    &lt;/div&gt;
-    &lt;div class="carousel-slide"&gt;
-        &lt;img src="https://via.placeholder.com/150" alt="Placeholder image"&gt;
-    &lt;/div&gt;
-    &lt;div class="carousel-slide"&gt;
-        &lt;img src="https://via.placeholder.com/150" alt="Placeholder image"&gt;
-    &lt;/div&gt;
-    &lt;div class="carousel-slide"&gt;
-        &lt;img src="https://via.placeholder.com/150" alt="Placeholder image"&gt;
-    &lt;/div&gt;
-    &lt;button class="carousel-prev"&gt;Prev&lt;/button&gt;
-    &lt;button class="carousel-next"&gt;Next&lt;/button&gt;
-&lt;/div&gt;
-            </code>
-        </pre>
-
+        
         <br><br>
         <h1>Accordion</h1>
         <hr>
