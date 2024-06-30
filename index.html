@@ -17,8 +17,18 @@
         </style>
     </head>
     <body style="padding: 40px;">
-        <h1>simple.css</h1>
+        <h1>simplist.css</h1>
         <p>A collection of minimal and easy to use components.</p>
+        <br><br>
+
+        <h1>Usage</h1>
+        <p>Import simplist.css with the following bit of code. Examples for all components are provided below.</p>
+        <pre>
+            <code class="language-html">
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://simplist.shuchir.dev/simplist.css&quot;&gt;
+            </code>
+        </pre>
+
         <br><br>
         <h1>Typography</h1>
         <hr>
@@ -150,7 +160,85 @@
         <br>
         <pre>
             <code class="language-html">
-------------------------------------------------------
+&lt;form&gt;
+    &lt;label for=&quot;name&quot;&gt;Name&lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;name&quot; name=&quot;name&quot; placeholder=&quot;Name&quot;&gt;
+    &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+    &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; placeholder=&quot;Email&quot;&gt;
+    &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
+    &lt;input type=&quot;password&quot; id=&quot;password&quot; name=&quot;password&quot; placeholder=&quot;*********&quot;&gt;
+    &lt;label for=&quot;message&quot;&gt;Message&lt;/label&gt;
+    &lt;textarea id=&quot;message&quot; name=&quot;message&quot; placeholder=&quot;Enter some text...&quot;&gt;&lt;/textarea&gt;
+
+    &lt;label for=&quot;number&quot;&gt;Number&lt;/label&gt;
+    &lt;div class=&quot;number-input&quot;&gt;
+        &lt;input type=&quot;number&quot; id=&quot;number&quot; name=&quot;number&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;secondary&quot; onclick=&quot;document.getElementById(&#39;number&#39;).stepDown()&quot;&gt;-&lt;/button&gt;
+        &lt;button type=&quot;button&quot; class=&quot;secondary&quot; onclick=&quot;document.getElementById(&#39;number&#39;).stepUp()&quot;&gt;+&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;label for=&quot;date&quot;&gt;Date&lt;/label&gt;
+    &lt;input type=&quot;date&quot; id=&quot;date&quot; name=&quot;date&quot;&gt;
+    &lt;label for=&quot;time&quot;&gt;Time&lt;/label&gt;
+    &lt;input type=&quot;time&quot; id=&quot;time&quot; name=&quot;time&quot;&gt;
+    &lt;label for=&quot;datetime&quot;&gt;Datetime&lt;/label&gt;
+    &lt;input type=&quot;datetime-local&quot; id=&quot;datetime&quot; name=&quot;datetime&quot;&gt;
+
+    &lt;label for=&quot;color&quot;&gt;Color&lt;/label&gt;
+    &lt;div class=&quot;color-container&quot;&gt;
+        &lt;input type=&quot;color&quot; id=&quot;color&quot; name=&quot;color&quot; oninput=&quot;this.parentElement.querySelector(&#39;p&#39;).innerHTML = this.value&quot;&gt;
+        &lt;p&gt;#000000&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;label for=&quot;range&quot;&gt;Range&lt;/label&gt;
+    &lt;input type=&quot;range&quot; id=&quot;range&quot; name=&quot;range&quot;&gt;
+    &lt;label for=&quot;file&quot;&gt;File&lt;/label&gt;
+    &lt;input type=&quot;file&quot; id=&quot;file&quot; name=&quot;file&quot;&gt;
+
+    &lt;label for=&quot;checkbox&quot;&gt;Checkbox&lt;/label&gt;
+    &lt;div class=&quot;selection_field&quot;&gt;
+        &lt;label for=&quot;checkbox&quot;&gt;Apples&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot; checked&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;selection_field&quot;&gt;
+        &lt;label for=&quot;checkbox&quot;&gt;Bananas&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;selection_field&quot;&gt;
+        &lt;label for=&quot;checkbox&quot;&gt;Oranges&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;checkbox&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;label for=&quot;radio&quot;&gt;Radio&lt;/label&gt;
+    &lt;div class=&quot;selection_field&quot;&gt;
+        &lt;label for=&quot;radio&quot;&gt;Apples&lt;/label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;radio&quot; checked&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;selection_field&quot;&gt;
+        &lt;label for=&quot;radio&quot;&gt;Bananas&lt;/label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;selection_field&quot;&gt;
+        &lt;label for=&quot;radio&quot;&gt;Oranges&lt;/label&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+    &lt;/div&gt;
+
+    &lt;label for=&quot;select&quot;&gt;Select&lt;/label&gt;
+    &lt;select id=&quot;select&quot; name=&quot;select&quot;&gt;
+        &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;label for=&quot;multiple&quot;&gt;Multiple&lt;/label&gt;
+    &lt;select id=&quot;multiple&quot; name=&quot;multiple&quot; multiple&gt;
+        &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
             </code>
         </pre>
 
@@ -337,9 +425,9 @@
 &lt;div class="dropdown"&gt;
     &lt;button class="dropbtn"&gt;Dropdown&lt;/button&gt;
     &lt;div class="dropdown-content"&gt;
-        &lt;a href="#"&gt;Link 1&lt;/a&gt;
-        &lt;a href="#"&gt;Link 2&lt;/a&gt;
-        &lt;a href="#"&gt;Link 3&lt;/a&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Link 1&lt;/a&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Link 2&lt;/a&gt;
+        &lt;a class="dropdown-item" href="#"&gt;Link 3&lt;/a&gt;
     &lt;/div&gt;
 &lt;/div&gt;
             </code>
@@ -361,7 +449,16 @@
         <br>
         <pre>
             <code class="language-html">
-------------------------------------------------------
+&lt;nav&gt;
+    &lt;div&gt;
+        &lt;a&gt;Left Content&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a&gt;Home&lt;/a&gt;
+        &lt;a&gt;About&lt;/a&gt;
+        &lt;a&gt;Contact&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
             </code>
         </pre>
 
@@ -380,92 +477,26 @@
         <br>
         <pre>
             <code class="language-html">
-------------------------------------------------------
-            </code>
-        </pre>
-
-        
-        <br><br>
-        <h1>Accordion</h1>
-        <hr>
-        <div class="accordion">
-            <button class="accordion-btn">Section 1</button>
-            <div class="accordion-content">
-                <p>Section 1 content goes here.</p>
-            </div>
-            <button class="accordion-btn">Section 2</button>
-            <div class="accordion-content">
-                <p>Section 2 content goes here.</p>
-            </div>
-            <button class="accordion-btn">Section 3</button>
-            <div class="accordion-content">
-                <p>Section 3 content goes here.</p>
-            </div>
-        </div>
-        <br>
-        <pre>
-            <code class="language-html">
-&lt;div class="accordion"&gt;
-    &lt;button class="accordion-btn"&gt;Section 1&lt;/button&gt;
-    &lt;div class="accordion-content"&gt;
-        &lt;p&gt;Section 1 content goes here.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;button class="accordion-btn"&gt;Section 2&lt;/button&gt;
-    &lt;div class="accordion-content"&gt;
-        &lt;p&gt;Section 2 content goes here.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;button class="accordion-btn"&gt;Section 3&lt;/button&gt;
-    &lt;div class="accordion-content"&gt;
-        &lt;p&gt;Section 3 content goes here.&lt;/p&gt;
+&lt;div class=&quot;card&quot;&gt;
+    &lt;img src=&quot;https://via.placeholder.com/150&quot; alt=&quot;Placeholder image&quot;&gt;
+    &lt;h2 class=&quot;card-title&quot;&gt;Card Title&lt;/h2&gt;
+    &lt;p class=&quot;card-content&quot;&gt;Card content goes here.&lt;/p&gt;
+    &lt;div class=&quot;card-footer&quot;&gt;
+        &lt;button&gt;Read More&lt;/button&gt;
     &lt;/div&gt;
 &lt;/div&gt;
             </code>
         </pre>
+
 
         <br><br>
         <h1>Tooltip</h1>
         <hr>
-        <span class="tooltip" title="Tooltip text">Hover over me</span>
+        <span class="tooltip"><span class="tooltiptext">Tooltip text</span>Hover over me</span>
         <br>
         <pre>
             <code class="language-html">
-&lt;span class="tooltip" title="Tooltip text"&gt;Hover over me&lt;/span&gt;
-            </code>
-        </pre>
-
-        <br><br>
-        <h1>Popover</h1>
-        <hr>
-        <span class="popover" title="Popover title" content="Popover content">Click me</span>
-        <br>
-        <pre>
-            <code class="language-html">
-&lt;span class="popover" title="Popover title" content="Popover content"&gt;Click me&lt;/span&gt;
-            </code>
-        </pre>
-
-        <br><br>
-        <h1>Dropdown</h1>
-        <hr>
-        <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
-            <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div>
-        <br>
-        <pre>
-            <code class="language-html">
-&lt;div class="dropdown"&gt;
-    &lt;button class="dropbtn"&gt;Dropdown&lt;/button&gt;
-    &lt;div class="dropdown-content"&gt;
-        &lt;a href="#"&gt;Link 1&lt;/a&gt;
-        &lt;a href="#"&gt;Link 2&lt;/a&gt;
-        &lt;a href="#"&gt;Link 3&lt;/a&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+&lt;span class=&quot;tooltip&quot;&gt;&lt;span class=&quot;tooltiptext&quot;&gt;Tooltip text&lt;/span&gt;Hover over me&lt;/span&gt;
             </code>
         </pre>
 
